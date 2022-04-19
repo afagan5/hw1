@@ -133,24 +133,120 @@ DROP TABLE IF EXISTS studios;
 
 
 CREATE TABLE movies (
-  movie_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  title TEXT,
-  year_released TEXT,
-  MPAA_rating TEXT
-  studio_id INTEGER
-  actor_id INTEGER
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+title TEXT,
+year_released TEXT,
+MPAA_rating TEXT,
+studio_id INTEGER,
+actor_id INTEGER
 );
 
 CREATE TABLE actors (
-  actor_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  actor_first_name TEXT,
-  actor_last_name TEXT,
-  character_first_name TEXT
-  character_last_name TEXT
-  movie_id TEXT
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+actor_name TEXT,
+character_name TEXT
 );
 
 CREATE TABLE studios (
-  studio_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  movie_id INTEGER
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+studio_name TEXT
+);
+
+INSERT INTO movies (
+title TEXT,
+year_released TEXT,
+MPAA_rating TEXT,
+studio_id INTEGER,
+actor_id INTEGER
+);
+
+VALUES (
+"Batman Begins",
+"2005",
+"PG-13",
+"Warner Bros"
+);
+INSERT INTO movies (
+title TEXT,
+year_released TEXT,
+MPAA_rating TEXT,
+studio_id INTEGER,
+actor_id INTEGER
+);
+
+VALUES (
+"The Dark Knight",
+"2008",
+"PG-13",
+"Warner Bros"
+);
+INSERT INTO movies (
+title TEXT,
+year_released TEXT,
+MPAA_rating TEXT,
+studio_id INTEGER,
+actor_id INTEGER
+);
+
+VALUES (
+"The Dark Knight Rises",
+"2012",
+"PG-13",
+"Warner Bros"
+);
+
+-- Batman Begins          Christian Bale        Bruce Wayne
+-- Batman Begins          Michael Caine         Alfred
+-- Batman Begins          Liam Neeson           Ra's Al Ghul
+-- Batman Begins          Katie Holmes          Rachel Dawes
+-- Batman Begins          Gary Oldman           Commissioner Gordon
+
+INSERT INTO actors (
+actor_name TEXT,
+character_name TEXT
+);
+
+VALUES (
+"Christian Bale",
+"Bruce Wayne"
+);
+
+INSERT INTO actors (
+actor_name TEXT,
+character_name TEXT
+);
+
+VALUES (
+"Michael Caine",
+"Alfred"
+);
+
+INSERT INTO actors (
+actor_name TEXT,
+character_name TEXT
+);
+
+VALUES (
+"Liam Neeson",
+"Ra's Al Ghul"
+);
+
+INSERT INTO actors (
+actor_name TEXT,
+character_name TEXT
+);
+
+VALUES (
+"Katie Holmes",
+"Rachel Dawes"
+);
+
+INSERT INTO actors (
+actor_name TEXT,
+character_name TEXT
+);
+
+VALUES (
+"Gary Oldman",
+"Commissioner Gordon"
 );
