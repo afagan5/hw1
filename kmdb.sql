@@ -96,8 +96,6 @@
 -- The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
 -- Turns column mode on but headers off
-.mode column
-.headers off
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
@@ -110,19 +108,11 @@
 -- TODO!
 
 -- Prints a header for the movies output
-.print "Movies"
-.print "======"
-.print ""
 
 -- The SQL statement for the movies output
 -- TODO!
 
 -- Prints a header for the cast output
-.print ""
-.print "Top Cast"
-.print "========"
-.print ""
-
 
 -- The SQL statement for the cast output
 -- TODO!
@@ -247,8 +237,24 @@ VALUES ("3", "10", "John Blake");
 INSERT INTO actor_jobs (movie_id, actor_id, character_name)
 VALUES ("3", "11", "Selina Kyle");
 
+.print "Movies"
+.print "======"
+.print ""
+
+.mode column
+.headers off
+
 SELECT movies.title, movies.year_released, movies.MPAA_rating, studios.studio_name
 FROM movies INNER JOIN studios ON studios.id = movies.studio_id;
+
+.print ""
+.print "Top Cast"
+.print "========"
+.print ""
+
+.mode column
+.headers off
+.width 25 25 25
 
 SELECT movies.title, actors.actor_name, actor_jobs.character_name FROM actor_jobs 
 INNER JOIN actors ON actors.id = actor_jobs.actor_id INNER JOIN movies ON movies.id = actor_jobs.movie_id;
