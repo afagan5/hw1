@@ -131,7 +131,6 @@ DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
 DROP TABLE IF EXISTS studios;
 
-
 CREATE TABLE movies (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 title TEXT,
@@ -152,101 +151,47 @@ id INTEGER PRIMARY KEY AUTOINCREMENT,
 studio_name TEXT
 );
 
-INSERT INTO movies (
-title TEXT,
-year_released TEXT,
-MPAA_rating TEXT,
-studio_id INTEGER,
-actor_id INTEGER
-);
 
-VALUES (
-"Batman Begins",
-"2005",
-"PG-13",
-"Warner Bros"
-);
-INSERT INTO movies (
-title TEXT,
-year_released TEXT,
-MPAA_rating TEXT,
-studio_id INTEGER,
-actor_id INTEGER
-);
+INSERT INTO movies (title, year_released, MPAA_rating)
+VALUES ("Batman Begins", "2005", "PG-13");
 
-VALUES (
-"The Dark Knight",
-"2008",
-"PG-13",
-"Warner Bros"
-);
-INSERT INTO movies (
-title TEXT,
-year_released TEXT,
-MPAA_rating TEXT,
-studio_id INTEGER,
-actor_id INTEGER
-);
+INSERT INTO movies (title, year_released, MPAA_rating)
+VALUES ("The Dark Knight", "2008", "PG-13");
 
-VALUES (
-"The Dark Knight Rises",
-"2012",
-"PG-13",
-"Warner Bros"
-);
+INSERT INTO movies (title, year_released, MPAA_rating)
+VALUES ("The Dark Knight Rises", "2012", "PG-13");
 
--- Batman Begins          Christian Bale        Bruce Wayne
--- Batman Begins          Michael Caine         Alfred
--- Batman Begins          Liam Neeson           Ra's Al Ghul
--- Batman Begins          Katie Holmes          Rachel Dawes
--- Batman Begins          Gary Oldman           Commissioner Gordon
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Christian Bale", "Bruce Wayne");
 
-INSERT INTO actors (
-actor_name TEXT,
-character_name TEXT
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Michael Caine", "Alfred");
 
-VALUES (
-"Christian Bale",
-"Bruce Wayne"
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Liam Neeson", "Ra's Al Ghul");
 
-INSERT INTO actors (
-actor_name TEXT,
-character_name TEXT
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Katie Holmes", "Rachel Dawes");
 
-VALUES (
-"Michael Caine",
-"Alfred"
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Gary Oldman", "Commissioner Gordon");
 
-INSERT INTO actors (
-actor_name TEXT,
-character_name TEXT
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Heath Ledger", "Joker");
 
-VALUES (
-"Liam Neeson",
-"Ra's Al Ghul"
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Aaron Eckhart", "Harvey Dent");
 
-INSERT INTO actors (
-actor_name TEXT,
-character_name TEXT
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Maggie Gyllenhaal", "Rachel Dawes");
 
-VALUES (
-"Katie Holmes",
-"Rachel Dawes"
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Tom Hardy", "Bane");
 
-INSERT INTO actors (
-actor_name TEXT,
-character_name TEXT
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Joseph Gordon-Levitt", "John Blake");
 
-VALUES (
-"Gary Oldman",
-"Commissioner Gordon"
-);
+INSERT INTO actors (actor_name, character_name)
+VALUES ("Anne Hathaway", "Selina Kyle");
+
+
