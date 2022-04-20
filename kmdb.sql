@@ -152,8 +152,8 @@ studio_name TEXT
 );
 
 
-INSERT INTO movies (title, year_released, MPAA_rating, studio_id, actor_id)
-VALUES ("Batman Begins", "2005", "PG-13", "1", "1");
+INSERT INTO movies (title, year_released, MPAA_rating, studio_id, actor_id(3)))
+VALUES ("Batman Begins", "2005", "PG-13", "1", "1", "2", "3");
 
 INSERT INTO movies (title, year_released, MPAA_rating, studio_id, actor_id)
 VALUES ("The Dark Knight", "2008", "PG-13", "1", "1");
@@ -199,3 +199,6 @@ VALUES ("Warner Bros.");
 
 SELECT movies.title, movies.year_released, movies.MPAA_rating, studios.studio_name
 FROM movies INNER JOIN studios ON studios.id = movies.studio_id;
+
+SELECT movies.title, actors.actor_name, actors.character_name FROM movies 
+INNER JOIN actors ON actors.id = movies.actor_id;
